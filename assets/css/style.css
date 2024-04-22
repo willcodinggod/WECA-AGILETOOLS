@@ -1,80 +1,73 @@
 /*----------------------------------------------swiper slide show for trips*/
-    /* Ensure no extra space */
-    body, html {
-        margin: 0; /* No margin */
-        padding: 0; /* No padding */
-        width: 100%; /* Full width */
-        height: 100%; /* Full height */
-        overflow-x: hidden; /* Avoid horizontal scroll */
-    }
-    
-    /* Swiper container set to full screen */
-    .swiper-container {
-        height: 100vh; /* Full viewport height */
-        width: 100vw; /* Full viewport width */
-        overflow: hidden; /* Avoid scrollbars */
-    }
-    
-    /* Swiper wrapper set to full height and width */
-    .swiper-wrapper {
-        height: 100%;
-        width: 100%;
-    }
-    
-    /* Each slide takes the full space */
-    .swiper-slide {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        height: 100%; /* Full height */
-        width: 100%; /* Full width */
-    }
-    
-    /* Image styles to fit the container */
-    .swiper-slide img {
-        height: 100%; /* Fill the height */
-        width: 100%; /* Fill the width */
-        object-fit: cover; /* Ensure image fills the container */
-        object-position: center; /* Keep focus in the center */
-        margin: 0; /* No extra spacing */
-        padding: 0;
-    }
-    
-    /* Nav bar with fixed positioning */
-    .nav-bar {
-        position: fixed; /* Keeps the nav bar at the top */
-        top: 0;
-        left: 0;
-        width: 100%; /* Full width */
-        background: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
-        color: white;
-        display: flex;
-        justify-content: space-between; /* Distribute items evenly */
-        align-items: center; /* Align items vertically */
-        padding: 10px; /* Padding for spacing */
-        z-index: 10; /* High z-index to stay on top */
-    }
-    
-    /* Logo style */
-    .logo {
-        font-size: 24px;
-        font-weight: bold;
-    }
-    
-    /* Navigation links */
-    .nav-links {
-        list-style-type: none; /* No bullet points */
-        margin: 0; /* No extra margin */
-        padding: 0; /* No extra padding */
-        display: flex; /* Horizontal layout */
-    }
-    
-    .nav-links li {
-        margin-right: 20px; /* Spacing between links */
-    }
-    
-    .nav-links a {
-        text-decoration: none; /* No underline */
-        color: white; /* Text color */
-        font-size: 18px;
-    }
+  /* Swiper container to cover full viewport */
+  .swiper-container {
+    height: 100vh; /* Full viewport height */
+    width: 100vw; /* Full viewport width */
+    overflow: hidden; /* Hide any overflowing content */
+}
+
+/* Swiper slide content */
+.swiper-slide {
+    position: relative; /* For absolute positioning of text */
+    display: flex;
+    justify-content: center; /* Centers content horizontally */
+    align-items: center; /* Centers content vertically */
+    height: 100%; /* Full height */
+    width: 100%; /* Full width */
+}
+
+/* Images should cover the whole slide with proper scaling */
+.swiper-slide img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover; /* Image fills the entire space */
+    object-position: center; /* Centered content */
+}
+
+/* Text overlay styling */
+.text-overlay {
+    position: absolute; /* Absolute positioning */
+    top: 50%; /* Centered vertically */
+    left: 50%; /* Centered horizontally */
+    transform: translate(-50%, -50%); /* Horizontal and vertical centering */
+    text-align: center; /* Center text */
+    color: white; /* White text for contrast */
+    padding: 10px 20px; /* Padding for readability */
+    border-radius: 5px; /* Rounded corners */
+}
+
+/* Adjust navigation arrow styles */
+.swiper-button-next, .swiper-button-prev {
+    position: absolute; /* Absolute position for flexibility */
+    bottom: 10px; /* Positioned at the bottom of the slide */
+    color: white; /* White for contrast */
+    border-radius: 50%; /* Circular shape */
+    width: 40px; /* Size of the buttons */
+    height: 40px; /* Height of the buttons */
+    line-height: 40px; /* Center the text/icon */
+    text-align: center;
+    z-index: 100; /* Ensure they stay on top */
+}
+
+/* Adjust arrow positions: Next and Prev at opposite ends */
+.swiper-button-next {
+    right: 20px; /* Right-aligned with some margin */
+}
+
+.swiper-button-prev {
+    left: 20px; /* Left-aligned with some margin */
+}
+
+/* Transparent navbar styling */
+.navbar {
+    position: fixed; /* Navbar remains at the top */
+    width: 100%; /* Full width */
+    top: 0; /* Fixed at the top */
+    z-index: 101; /* Above all other content */
+    transition: background-color 0.3s; /* Smooth transition */
+}
+
+/* Navbar hover effect to change background for better readability */
+.navbar:hover {
+    background: rgba(0, 0, 0, 0.7); /* Darker background on hover for readability */
+}
