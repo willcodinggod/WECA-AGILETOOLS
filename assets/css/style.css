@@ -1,32 +1,80 @@
-
 /*----------------------------------------------swiper slide show for trips*/
-.swiper-container {
-    height: 100vh; /* Full viewport height */
-    width: 100vw; /* Full viewport width */
-    overflow: hidden; /* Avoid scrollbars */
-}
-
-/* Swiper wrapper set to full height and width */
-.swiper-wrapper {
-    height: 100%;
-    width: 100%;
-}
-
-/* Each slide takes the full space */
-.swiper-slide {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100%; /* Full height */
-    width: 100%; /* Full width */
-}
-
-/* Image styles to fit the container */
-.swiper-slide img {
-    height: 100%; /* Fill the height */
-    width: 100%; /* Fill the width */
-    object-fit: cover; /* Ensure image fills the container */
-    object-position: center; /* Keep focus in the center */
-    margin: 0; /* No extra spacing */
-    padding: 0;
-}
+    /* Ensure no extra space */
+    body, html {
+        margin: 0; /* No margin */
+        padding: 0; /* No padding */
+        width: 100%; /* Full width */
+        height: 100%; /* Full height */
+        overflow-x: hidden; /* Avoid horizontal scroll */
+    }
+    
+    /* Swiper container set to full screen */
+    .swiper-container {
+        height: 100vh; /* Full viewport height */
+        width: 100vw; /* Full viewport width */
+        overflow: hidden; /* Avoid scrollbars */
+    }
+    
+    /* Swiper wrapper set to full height and width */
+    .swiper-wrapper {
+        height: 100%;
+        width: 100%;
+    }
+    
+    /* Each slide takes the full space */
+    .swiper-slide {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100%; /* Full height */
+        width: 100%; /* Full width */
+    }
+    
+    /* Image styles to fit the container */
+    .swiper-slide img {
+        height: 100%; /* Fill the height */
+        width: 100%; /* Fill the width */
+        object-fit: cover; /* Ensure image fills the container */
+        object-position: center; /* Keep focus in the center */
+        margin: 0; /* No extra spacing */
+        padding: 0;
+    }
+    
+    /* Nav bar with fixed positioning */
+    .nav-bar {
+        position: fixed; /* Keeps the nav bar at the top */
+        top: 0;
+        left: 0;
+        width: 100%; /* Full width */
+        background: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+        color: white;
+        display: flex;
+        justify-content: space-between; /* Distribute items evenly */
+        align-items: center; /* Align items vertically */
+        padding: 10px; /* Padding for spacing */
+        z-index: 10; /* High z-index to stay on top */
+    }
+    
+    /* Logo style */
+    .logo {
+        font-size: 24px;
+        font-weight: bold;
+    }
+    
+    /* Navigation links */
+    .nav-links {
+        list-style-type: none; /* No bullet points */
+        margin: 0; /* No extra margin */
+        padding: 0; /* No extra padding */
+        display: flex; /* Horizontal layout */
+    }
+    
+    .nav-links li {
+        margin-right: 20px; /* Spacing between links */
+    }
+    
+    .nav-links a {
+        text-decoration: none; /* No underline */
+        color: white; /* Text color */
+        font-size: 18px;
+    }
