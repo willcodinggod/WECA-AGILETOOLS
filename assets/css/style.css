@@ -1,0 +1,32 @@
+
+/*----------------------------------------------swiper slide show for trips*/
+.swiper-container {
+    height: 100vh; /* Full viewport height */
+    width: 100vw; /* Full viewport width */
+    overflow: hidden; /* Avoid scrollbars */
+}
+
+/* Swiper wrapper set to full height and width */
+.swiper-wrapper {
+    height: 100%;
+    width: 100%;
+}
+
+/* Each slide takes the full space */
+.swiper-slide {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%; /* Full height */
+    width: 100%; /* Full width */
+}
+
+/* Image styles to fit the container */
+.swiper-slide img {
+    height: 100%; /* Fill the height */
+    width: 100%; /* Fill the width */
+    object-fit: cover; /* Ensure image fills the container */
+    object-position: center; /* Keep focus in the center */
+    margin: 0; /* No extra spacing */
+    padding: 0;
+}

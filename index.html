@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Swiper Full-Screen Slideshow</title>
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+    <link rel="stylesheet" href="assets/css/style.css" type="text/css">
+    <style>
+        /* Swiper container set to full screen */
+        
+    </style>
+</head>
+<body>
+    <!-- Swiper Slideshow Container -->
+    <div class="swiper-container">
+        <!-- Swiper Wrapper -->
+        <div class="swiper-wrapper">
+            <!-- Each slide -->
+            <div class="swiper-slide">
+                <img src="./assets/images/pexels-toulouse-3098932.jpg" alt="Trip to Lisbon">
+            </div>
+            <div class="swiper-slide">
+                <img src="./assets/images/pexels-tomfisk-1312067.jpg" alt="Trip to Porto">
+            </div>
+            <div class="swiper-slide">
+                <img src="./assets/images/pexels-toulouse-3098979.jpg" alt="Trip to Algarve">
+            </div>
+        </div>
+        <!-- Navigation Buttons -->
+        <div class="swiper-button-next"></div>
+        <div class="swiper-button-prev"></div>
+        <!-- Pagination (optional) -->
+        <div class="swiper-pagination"></div>
+    </div>
+
+    <!-- Swiper JavaScript -->
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script>
+        var swiper = new Swiper(".swiper-container", {
+            loop: true,
+            navigation: {
+                nextEl: ".swiper-button-next",
+                prevEl: ".swiper-button-prev",
+            },
+            pagination: {
+                el: ".swiper-pagination",
+                clickable: true,
+            },
+            autoplay: {
+                delay: 3000, // 3 seconds
+                disableOnInteraction: false,
+            },
+        });
+    </script>
+</body>
+</html>
