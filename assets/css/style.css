@@ -36,28 +36,27 @@
     border-radius: 5px; /* Rounded corners */
 }
 
-/* Adjust navigation arrow styles */
+/* Navigation arrows with circular style */
 .swiper-button-next, .swiper-button-prev {
-    position: absolute; /* Absolute position for flexibility */
+    position: absolute; /* Absolute positioning for flexibility */
     bottom: 10px; /* Positioned at the bottom of the slide */
     color: white; /* White for contrast */
     border-radius: 50%; /* Circular shape */
-    width: 40px; /* Size of the buttons */
-    height: 40px; /* Height of the buttons */
-    line-height: 40px; /* Center the text/icon */
-    text-align: center;
+    width: 30px; /* Reduced diameter for smaller button */
+    height: 30px; /* Reduced height for smaller button */
+    line-height: 30px; /* Center the text/icon in a smaller area */
+    text-align: center; /* Center alignment */
     z-index: 100; /* Ensure they stay on top */
 }
 
-/* Adjust arrow positions: Next and Prev at opposite ends */
+/* Position arrows to the bottom-right corner */
 .swiper-button-next {
-    right: 20px; /* Right-aligned with some margin */
+    right: 10px; /* Positioned at the bottom-right */
 }
 
 .swiper-button-prev {
-    left: 20px; /* Left-aligned with some margin */
+    right: 50px; /* Positioned to the left of the next button, closer than before */
 }
-
 /* Transparent navbar styling */
 .navbar {
     position: fixed; /* Navbar remains at the top */
