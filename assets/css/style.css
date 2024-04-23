@@ -57,6 +57,8 @@
 .swiper-button-prev {
     right: 50px; /* Positioned to the left of the next button, closer than before */
 }
+
+/*--------------------------------------------------------------------------navbar
 /* Transparent navbar styling */
 .navbar {
     position: fixed; /* Navbar remains at the top */
@@ -69,4 +71,116 @@
 /* Navbar hover effect to change background for better readability */
 .navbar:hover {
     background: rgba(0, 0, 0, 0.7); /* Darker background on hover for readability */
+}
+
+
+/*-----------------------------------------------------------------------main*/
+main {
+    flex-grow: 1;
+    background-color: black;
+}
+
+
+/*---------------------------------------------------------------------footer*/
+ body, html {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+/* Custom Styles for the footer */
+/* Custom Styles for the footer */
+/* Custom Styles for the footer */
+footer {
+    margin-top: auto;
+    background-color: #333;
+    color: #fff;
+    padding: 50px 0; /* Increased padding for more spacing */
+}
+
+.footer-logo {
+    margin-bottom: 20px; /* Add space below the logo */
+}
+
+.footer-logo img {
+    max-height: 50px;
+}
+
+.footer-menu {
+    list-style: none;
+    padding: 0;
+    margin-bottom: 20px; /* Add space below the menu */
+}
+
+.footer-menu li {
+    display: block;
+    margin-right: 30px; /* Increased margin between menu items */
+}
+
+.footer-menu li:last-child {
+    margin-right: 0;
+}
+
+.footer-menu li a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.footer-menu li a:hover {
+    color: #FFD700; /* Change to desired hover color */
+}
+
+.social-icons {
+    margin-bottom: 20px; /* Add space below the social icons */
+}
+
+.social-icons a {
+    color: #fff;
+    margin-right: 20px; /* Increased margin between social icons */
+    text-decoration: none;
+}
+
+.social-icons a:hover {
+    color: #FFD700; /* Change to desired hover color */
+}
+
+.email-signup {
+    margin-top: 20px;
+}
+
+.email-input {
+    width: 70%;
+    padding: 10px;
+    border: none;
+    border-radius: 5px 0 0 5px;
+}
+
+.btn-subscribe {
+    background-color: #FFD700; /* Change to desired button color */
+    color: #333;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 0 5px 5px 0;
+    cursor: pointer;
+}
+/* Adjust column widths */
+.col-md-3 {
+    flex: 0 0 60%; /* Adjusted column width for 4 columns */
+    margin-bottom: 20px; /* Add margin between columns */
+}
+
+
+
+  /* Larger logo and burger menu on smaller devices */
+@media (min-width: 769px) {
+    .navbar-brand img {
+        max-height: 70px; /* Adjust logo size as needed */
+    }
+    .navbar-toggler-icon {
+        font-size: 4rem; /* Adjust burger menu icon size as needed */
+    }
 }
