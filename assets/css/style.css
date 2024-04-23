@@ -1,3 +1,15 @@
+/*------------------------------------------------general style*/
+.bg-color-home {
+    background-image: url(/assets/images/pexels-toulouse-3098979.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+
+
+
+
 /*----------------------------------------------swiper slide show for trips*/
   /* Swiper container to cover full viewport */
   .swiper-container {
@@ -58,6 +70,33 @@
     right: 50px; /* Positioned to the left of the next button, closer than before */
 }
 
+.more-info-box {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: rgba(255, 255, 255, 0.8);
+    border: 1px solid #fff;
+    padding: 10px 20px;
+    border-radius: 5px;
+}
+
+.more-info-btn {
+    background-color: transparent;
+    color: #fff;
+    border: 2px solid #fff;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.more-info-btn:hover {
+    background-color: #fff;
+    color: #333;
+}
+
+
 /*--------------------------------------------------------------------------navbar
 /* Transparent navbar styling */
 .navbar {
@@ -97,7 +136,7 @@ main {
 /* Custom Styles for the footer */
 footer {
     margin-top: auto;
-    background-color: #333;
+    background-color: #000;
     color: #fff;
     padding: 50px 0; /* Increased padding for more spacing */
 }
