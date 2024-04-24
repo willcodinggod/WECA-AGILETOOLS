@@ -1,3 +1,7 @@
+/*ggogle fonts*/
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Staatliches&display=swap');
+
+
 /*------------------------------------------------general style*/
 .bg-color-home {
     background-image: url(/assets/images/pexels-toulouse-3098979.jpg);
@@ -6,6 +10,35 @@
     background-position: center;
 }
 
+/*--------------------------------------------------------------------------logo*/
+.navbar-logo {
+    margin-right: auto; /* Pushes the logo to the left */
+}
+.navbar-logo img {
+    width: 60px; /* Set the desired width */
+    height: 60px; /* Set the desired height */
+    }
+
+/*--------------------------------------------------------------------------navbar*/
+.navbar {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+}
+.navbar-nav {
+    margin-left: auto; /* Pushes the navbar items to the right */
+}
+/* Navbar hover effect to change background for better readability */
+.navbar:hover {
+    background: rgba(0, 0, 0, 0.3); /* Darker background on hover for readability */
+}
+.navbar-nav .nav-link {
+    color: #ffffff; /* Change text color to white */
+    font-size: 20px;
+    font-family: 'Lato',sans-serif;
+    font-weight: 500;
+}
 
 /*----------------------------------------------swiper slide show for trips*/
   /* Swiper container to cover full viewport */
@@ -92,36 +125,13 @@
     background-color: #fff;
     color: #333;
 }
-
-
-/*--------------------------------------------------------------------------navbar
-/* Transparent navbar styling */
-.navbar {
-    position: fixed; /* Navbar remains at the top */
-    width: 100%; /* Full width */
-    top: 0; /* Fixed at the top */
-    z-index: 101; /* Above all other content */
-    transition: background-color 0.3s; /* Smooth transition */
-}
-.navbar-brand {
-    font-size: 20px; /* Adjust the font size to make the logo smaller */
-}
-
-/* Navbar hover effect to change background for better readability */
-.navbar:hover {
-    background: rgba(0, 0, 0, 0.7); /* Darker background on hover for readability */
-}
-
-
 /*-----------------------------------------------------------------------main*/
 main {
     flex-grow: 1;
     background-color: black;
 }
-
-
 /*---------------------------------------------------------------------footer*/
- body, html {
+body, html {
     height: 100%;
     margin: 0;
     padding: 0;
@@ -131,85 +141,64 @@ main {
     flex-direction: column;
     min-height: 100vh;
 }
-/* Custom Styles for the footer */
-/* Custom Styles for the footer */
-/* Custom Styles for the footer */
-footer {
-    margin-top: auto;
+.footer {
     background-color: #000;
     color: #fff;
-    padding: 50px 0; /* Increased padding for more spacing */
+    padding-top: 60px; /* Increase padding to make the footer taller */
+    padding-bottom: 60px;
+    
 }
-
-.footer-logo {
-    margin-bottom: 20px; /* Add space below the logo */
-}
-
 .footer-logo img {
-    max-height: 50px;
+    max-width: 100px;
 }
-
-.footer-menu {
+.footer-info p {
+    margin-bottom: 30px;
+}
+.footer-links ul {
     list-style: none;
     padding: 0;
-    margin-bottom: 20px; /* Add space below the menu */
 }
-
-.footer-menu li {
-    display: block;
-    margin-right: 30px; /* Increased margin between menu items */
+.footer-links ul li {
+    margin-bottom: 30px;
 }
-
-.footer-menu li:last-child {
-    margin-right: 0;
-}
-
-.footer-menu li a {
+.footer-social ul {
+    list-style: none;
+    padding: 0;
     color: #fff;
-    text-decoration: none;
+}
+.footer-social ul li {
+    display: inline-block;
+    margin-right: 10px;
 }
 
-.footer-menu li a:hover {
-    color: #FFD700; /* Change to desired hover color */
+.footer-social {
+    margin-bottom: 50px;
+}
+/* Style for social media icons */
+.footer-social ul li a {
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    padding: 5px;
+    border-radius: 0;
+    font-size: 30px;
+    line-height: 40px;
+    text-align: center;
+    color: #fafafa;
+    transition: all 0.3s ease-in-out;
+    -moz-transition: all 0.3s ease-in-out;
+    -webkit-transition: all 0.3s ease-in-out;
+    -o-transition: all 0.3s ease-in-out;
+}
+.footer-social ul li a:hover {
+    background: #e84610;
+    border-radius: 50%;
 }
 
-.social-icons {
-    margin-bottom: 20px; /* Add space below the social icons */
-}
-
-.social-icons a {
-    color: #fff;
-    margin-right: 20px; /* Increased margin between social icons */
-    text-decoration: none;
-}
-
-.social-icons a:hover {
-    color: #FFD700; /* Change to desired hover color */
-}
-
-.email-signup {
-    margin-top: 20px;
-}
-
-.email-input {
-    width: 70%;
-    padding: 10px;
-    border: none;
-    border-radius: 5px 0 0 5px;
-}
-
-.btn-subscribe {
-    background-color: #FFD700; /* Change to desired button color */
-    color: #333;
-    border: none;
-    padding: 10px 20px;
-    border-radius: 0 5px 5px 0;
-    cursor: pointer;
-}
-/* Adjust column widths */
-.col-md-3 {
-    flex: 0 0 60%; /* Adjusted column width for 4 columns */
-    margin-bottom: 20px; /* Add margin between columns */
+.footer-bottom {
+    padding: 50px;
+    margin: 0 auto; /* Set left and right margins to auto */
+    text-align: center; /* Align the text content center */
 }
 
 /* Media query for small devices */
