@@ -7,9 +7,6 @@
 }
 
 
-
-
-
 /*----------------------------------------------swiper slide show for trips*/
   /* Swiper container to cover full viewport */
   .swiper-container {
@@ -105,6 +102,9 @@
     top: 0; /* Fixed at the top */
     z-index: 101; /* Above all other content */
     transition: background-color 0.3s; /* Smooth transition */
+}
+.navbar-brand {
+    font-size: 20px; /* Adjust the font size to make the logo smaller */
 }
 
 /* Navbar hover effect to change background for better readability */
@@ -212,14 +212,10 @@ footer {
     margin-bottom: 20px; /* Add margin between columns */
 }
 
-
-
-  /* Larger logo and burger menu on smaller devices */
-@media (min-width: 769px) {
-    .navbar-brand img {
-        max-height: 70px; /* Adjust logo size as needed */
-    }
-    .navbar-toggler-icon {
-        font-size: 4rem; /* Adjust burger menu icon size as needed */
+/* Media query for small devices */
+@media screen and (max-width: 768px) {
+    .quick-links,
+    .connect-with-us {
+        display: none; /* Hide quick-links on small devices */
     }
 }
