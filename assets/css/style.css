@@ -36,7 +36,7 @@
     font-weight: 500;
 }
 .nav-link.active {
-    color: #bfe01c; /* Text color for active link */
+    color: #BB6A0D !important; /* Text color for active link */
     
 }
 /*--------------------------------------------------------------------------destination page*/
@@ -221,7 +221,16 @@ body, html {
     .carousel-item {
         height: 100vh; /* Set height to cover the whole viewport height */
     }
+    .navbar-toggler {
+        color: white !important; /* Change to the desired color */
+    }
+    
     .navbar-toggler-icon {
-        color: #ff0000 !important;  /* Change to the desired color */
+        background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='%23fff' class='bi bi-list' viewBox='0 0 16 16'%3e%3cpath fill-rule='evenodd' d='M1 2.75a.75.75 0 0 1 0-1.5h14a.75.75 0 0 1 0 1.5H1zM1 7.75a.75.75 0 0 1 0-1.5h14a.75.75 0 0 1 0 1.5H1zM1 12.75a.75.75 0 0 1 0-1.5h14a.75.75 0 0 1 0 1.5H1z'/%3e%3c/svg%3e");
+        background-repeat: no-repeat;
+        background-size: contain;
+        background-position: center;
+        width: 1.5em;
+        height: 1.5em;
     }
 }
