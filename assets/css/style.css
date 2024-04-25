@@ -8,33 +8,31 @@
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
+    position: relative;
+}
+/*--------------------------------------------------------------------------logo*/
+.navbar-logo img {
+    width: 400px; 
+    height:100px; 
 }
 
-/*--------------------------------------------------------------------------logo*/
-.navbar-logo {
-    margin-right: auto; /* Pushes the logo to the left */
-}
-.navbar-logo img {
-    width: 60px; /* Set the desired width */
-    height: 60px; /* Set the desired height */
-    }
 
 /*--------------------------------------------------------------------------navbar*/
 .navbar {
-    position: fixed;
+    position: absolute;
     width: 100%;
     top: 0;
     z-index: 1000;
 }
 .navbar-nav {
-    margin-left: auto; /* Pushes the navbar items to the right */
+    margin-left: auto; 
 }
 /* Navbar hover effect to change background for better readability */
 .navbar:hover {
-    background: rgba(0, 0, 0, 0.3); /* Darker background on hover for readability */
+    background: rgba(0, 0, 0, 0.3); 
 }
 .navbar-nav .nav-link {
-    color: #ffffff; /* Change text color to white */
+    color: #fafafa; 
     font-size: 20px;
     font-family: 'Lato',sans-serif;
     font-weight: 500;
@@ -43,61 +41,61 @@
 /*----------------------------------------------swiper slide show for trips*/
   /* Swiper container to cover full viewport */
   .swiper-container {
-    height: 100vh; /* Full viewport height */
-    width: 100vw; /* Full viewport width */
-    overflow: hidden; /* Hide any overflowing content */
+    height: 100vh; 
+    width: 100vw; 
+    overflow: hidden;
 }
 
 /* Swiper slide content */
 .swiper-slide {
-    position: relative; /* For absolute positioning of text */
+    position: relative; 
     display: flex;
-    justify-content: center; /* Centers content horizontally */
-    align-items: center; /* Centers content vertically */
-    height: 100%; /* Full height */
-    width: 100%; /* Full width */
+    justify-content: center;
+    align-items: center; 
+    height: 100%; 
+    width: 100%; 
 }
 
 /* Images should cover the whole slide with proper scaling */
 .swiper-slide img {
     height: 100%;
     width: 100%;
-    object-fit: cover; /* Image fills the entire space */
-    object-position: center; /* Centered content */
+    object-fit: cover; 
+    object-position: center; 
 }
 
 /* Text overlay styling */
 .text-overlay {
-    position: absolute; /* Absolute positioning */
-    top: 50%; /* Centered vertically */
-    left: 50%; /* Centered horizontally */
-    transform: translate(-50%, -50%); /* Horizontal and vertical centering */
-    text-align: center; /* Center text */
-    color: white; /* White text for contrast */
-    padding: 10px 20px; /* Padding for readability */
-    border-radius: 5px; /* Rounded corners */
+    position: absolute;
+    top: 50%; 
+    left: 50%; 
+    transform: translate(-50%, -50%); 
+    text-align: center; 
+    color: white; 
+    padding: 10px 20px; 
+    border-radius: 5px;
 }
 
 /* Navigation arrows with circular style */
 .swiper-button-next, .swiper-button-prev {
-    position: absolute; /* Absolute positioning for flexibility */
-    bottom: 10px; /* Positioned at the bottom of the slide */
-    color: white; /* White for contrast */
-    border-radius: 50%; /* Circular shape */
-    width: 30px; /* Reduced diameter for smaller button */
-    height: 30px; /* Reduced height for smaller button */
-    line-height: 30px; /* Center the text/icon in a smaller area */
-    text-align: center; /* Center alignment */
-    z-index: 100; /* Ensure they stay on top */
+    position: absolute; 
+    bottom: 10px; 
+    color: white; 
+    border-radius: 50%; 
+    width: 30px; 
+    height: 30px; 
+    line-height: 30px; 
+    text-align: center; 
+    z-index: 100; 
 }
 
 /* Position arrows to the bottom-right corner */
 .swiper-button-next {
-    right: 10px; /* Positioned at the bottom-right */
+    right: 10px; 
 }
 
 .swiper-button-prev {
-    right: 50px; /* Positioned to the left of the next button, closer than before */
+    right: 50px; 
 }
 
 .more-info-box {
@@ -144,19 +142,33 @@ body, html {
 .footer {
     background-color: #000;
     color: #fff;
-    padding-top: 60px; /* Increase padding to make the footer taller */
-    padding-bottom: 60px;
+    padding-top: 10px; 
+    padding-bottom: 10px;
     
 }
-.footer-logo img {
-    max-width: 100px;
+.footer-info,
+.footer-links,
+.footer-social,
+.footer-signup {
+    margin-top: 20px; 
 }
+.footer-logo img {
+    max-width: 250px; 
+    max-height: 300px;
+    
+}
+
 .footer-info p {
     margin-bottom: 30px;
+    margin-top: 30px;
 }
 .footer-links ul {
     list-style: none;
     padding: 0;
+    margin-top: 20px;
+}
+.what-we-do {
+    margin-top: 30px;
 }
 .footer-links ul li {
     margin-bottom: 30px;
@@ -196,15 +208,24 @@ body, html {
 }
 
 .footer-bottom {
-    padding: 50px;
-    margin: 0 auto; /* Set left and right margins to auto */
-    text-align: center; /* Align the text content center */
+    padding: 10px 0;
+    margin: 0 auto; 
+    text-align: center; 
+}
+.paragraph-gap {
+    margin-top: 20px;
 }
 
 /* Media query for small devices */
 @media screen and (max-width: 768px) {
-    .quick-links,
-    .connect-with-us {
-        display: none; /* Hide quick-links on small devices */
+    .footer-links,
+    .footer-signup,
+    .footer-info {
+        display: none;
     }
+    .navbar-logo img {
+        width: 300px; /* Adjust the width for smaller devices */
+        height: auto; /* Allow height to adjust proportionally */
+    }
+    
 }
