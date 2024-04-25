@@ -15,6 +15,30 @@
     width: 400px; 
     height:100px; 
 }
+/*--------------------------------------------------------------------------navbar*/
+.navbar {
+    position: absolute;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+}
+.navbar-nav {
+    margin-left: auto; 
+}
+/* Navbar hover effect to change background for better readability */
+.navbar:hover {
+    background: rgba(0, 0, 0, 0.3); 
+}
+.navbar-nav .nav-link {
+    color: #fafafa; 
+    font-size: 20px;
+    font-family: 'Lato',sans-serif;
+    font-weight: 500;
+}
+.nav-link.active {
+    color: #bfe01c; /* Text color for active link */
+    
+}
 /*--------------------------------------------------------------------------destination page*/
 .carousel {
     height: 100vh; /* 100% of the viewport height */
@@ -39,134 +63,58 @@
 
 .overlay {
     position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.2); /* Adjust the transparency (alpha value) as needed */
+    color: #fafafa; /* Set the text color */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     text-align: center;
-    color: white; /* Text color */
+    padding: 20px; /* Adjust the padding as needed */
+   
 }
+
 
 .overlay h6 {
     font-size: 1.2rem;
+    margin-bottom: 5cm; /* Move up by 5 cm */
+    
 }
 
-.overlay h2 {
+.overlay h1 {
     font-size: 2.5rem;
-    margin-bottom: 20px; /* Adjust spacing between title and description */
+    margin-bottom: 20px;
+    margin-bottom: 2cm;
 }
 
 .overlay p {
     font-size: 1.1rem;
+    margin-bottom: 4cm;
+    
+}
+.content {
+    background-color: rgba(255, 255, 255, 0.3);
+    padding: 20px;
+    text-align: center;
 }
 
-/*--------------------------------------------------------------------------navbar*/
-.navbar {
-    position: absolute;
-    width: 100%;
-    top: 0;
-    z-index: 1000;
-}
-.navbar-nav {
-    margin-left: auto; 
-}
-/* Navbar hover effect to change background for better readability */
-.navbar:hover {
-    background: rgba(0, 0, 0, 0.3); 
-}
-.navbar-nav .nav-link {
-    color: #fafafa; 
-    font-size: 20px;
-    font-family: 'Lato',sans-serif;
-    font-weight: 500;
-}
-.nav-link.active {
-    color: #ff0000; /* Change color to highlight the active link */
+.more-info-link {
+    display: block;
+    margin-top: 10px;
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    border: 1px solid white;
+    padding: 5px 10px;
 }
 
-/*----------------------------------------------swiper slide show for trips*/
-  /* Swiper container to cover full viewport */
-  .swiper-container {
-    height: 100vh; 
-    width: 100vw; 
-    overflow: hidden;
-}
-
-/* Swiper slide content */
-.swiper-slide {
-    position: relative; 
-    display: flex;
-    justify-content: center;
-    align-items: center; 
-    height: 100%; 
-    width: 100%; 
-}
-
-/* Images should cover the whole slide with proper scaling */
-.swiper-slide img {
-    height: 100%;
-    width: 100%;
-    object-fit: cover; 
-    object-position: center; 
-}
-
-/* Text overlay styling */
-.text-overlay {
-    position: absolute;
-    top: 50%; 
-    left: 50%; 
-    transform: translate(-50%, -50%); 
-    text-align: center; 
-    color: white; 
-    padding: 10px 20px; 
-    border-radius: 5px;
-}
-
-/* Navigation arrows with circular style */
-.swiper-button-next, .swiper-button-prev {
-    position: absolute; 
-    bottom: 10px; 
-    color: white; 
-    border-radius: 50%; 
-    width: 30px; 
-    height: 30px; 
-    line-height: 30px; 
-    text-align: center; 
-    z-index: 100; 
-}
-
-/* Position arrows to the bottom-right corner */
-.swiper-button-next {
-    right: 10px; 
-}
-
-.swiper-button-prev {
-    right: 50px; 
-}
-
-.more-info-box {
-    position: absolute;
-    bottom: 20px;
-    left: 50%;
-    transform: translateX(-50%);
-    background-color: rgba(255, 255, 255, 0.8);
-    border: 1px solid #fff;
-    padding: 10px 20px;
-    border-radius: 5px;
-}
-
-.more-info-btn {
-    background-color: transparent;
-    color: #fff;
-    border: 2px solid #fff;
-    padding: 10px 20px;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background-color 0.3s, color 0.3s;
-}
-
-.more-info-btn:hover {
-    background-color: #fff;
-    color: #333;
+.more-info-link:hover {
+    color: black;
+    background-color: white;
 }
 /*-----------------------------------------------------------------------main*/
 main {
@@ -188,8 +136,7 @@ body, html {
     background-color: #000;
     color: #fff;
     padding-top: 10px; 
-    padding-bottom: 10px;
-    
+    padding-bottom: 10px;  
 }
 .footer-info,
 .footer-links,
@@ -199,8 +146,7 @@ body, html {
 }
 .footer-logo img {
     max-width: 250px; 
-    max-height: 300px;
-    
+    max-height: 300px;   
 }
 
 .footer-info p {
@@ -272,5 +218,10 @@ body, html {
         width: 300px; /* Adjust the width for smaller devices */
         height: auto; /* Allow height to adjust proportionally */
     }
-    
+    .carousel-item {
+        height: 100vh; /* Set height to cover the whole viewport height */
+    }
+    .navbar-toggler-icon {
+        color: #ff0000 !important;  /* Change to the desired color */
+    }
 }
