@@ -119,6 +119,9 @@ $(document).ready(function() {
     // Get the current page's URL
     var currentPage = window.location.pathname;
 
+    // Remove 'active' class from all navigation links
+    $('.nav-link').removeClass('active');
+
     // Check if the current page is the home page
     if (currentPage === '/' || currentPage === '/index.html') {
         // Add 'active' class to the Home link
