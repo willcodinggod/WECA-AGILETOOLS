@@ -2,7 +2,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Staatliches&display=swap');
 
 
-/*------------------------------------------------general style*/
+/*------------------------------------------------home style*/
 .bg-color-home {
     background-image: url(/assets/images/pexels-toulouse-3098979.jpg);
     background-size: cover;
@@ -10,6 +10,36 @@
     background-position: center;
     position: relative;
 }
+
+.overlay-home {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Adjust the opacity as needed */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 999; /* Ensure the overlay is above other content */
+}
+
+.text-area {
+    text-align: center;
+    color: white;
+    padding: 20px;
+}
+
+.text-area h2 {
+    font-size: 36px;
+    margin-bottom: 10px;
+}
+
+.text-area h4 {
+    font-size: 24px;
+    margin-top: 0;
+}
+
 /*--------------------------------------------------------------------------logo*/
 .navbar-logo img {
     width: 400px; 
@@ -122,16 +152,6 @@ main {
     background-color: black;
 }
 /*---------------------------------------------------------------------footer*/
-body, html {
-    height: 100%;
-    margin: 0;
-    padding: 0;
-}
-.wrapper {
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;
-}
 .footer {
     background-color: #000;
     color: #fff;
