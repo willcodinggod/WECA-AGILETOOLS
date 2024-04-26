@@ -4,40 +4,51 @@
 
 /*------------------------------------------------home style*/
 .bg-color-home {
+    position: relative;
     background-image: url(/assets/images/pexels-toulouse-3098979.jpg);
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
-    position: relative;
 }
 
 .overlay-home {
-    position: fixed;
+    position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.5); /* Adjust the opacity as needed */
+    background-color: rgba(0, 0, 0, 0.3); /* Adjust the alpha value to change darkness */
     display: flex;
     justify-content: center;
     align-items: center;
-    z-index: 999; /* Ensure the overlay is above other content */
+    color: #fafafa;
+    z-index: 1; /* Ensure the overlay is above the background image */
 }
 
-.text-area {
+.overlay-content {
     text-align: center;
-    color: white;
-    padding: 20px;
 }
 
-.text-area h2 {
-    font-size: 36px;
-    margin-bottom: 10px;
+.overlay-home h2 {
+    font-size: 3em;
+    margin-bottom: 0.5em;
 }
 
-.text-area h4 {
-    font-size: 24px;
+.overlay-home h4 {
+    font-size: 1.5em;
     margin-top: 0;
+}
+
+body, html {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
 }
 
 /*--------------------------------------------------------------------------logo*/
